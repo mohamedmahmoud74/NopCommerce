@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.example.TestRunner.Runners
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 258.276 s <<< FAILURE! - in org.example.TestRunner.Runners
+org.example.TestRunner.Runners.runScenario  Time elapsed: 34.172 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+target frame detached
+  (failed to check if window was closed: disconnected: unable to connect to renderer)
+  (Session info: chrome=107.0.5304.107)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [564b4005e71049d463446257f3c5bbb0, findElement {using=xpath, value=//div[@class="result"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\FIXSTO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65391}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65391/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 564b4005e71049d463446257f3c5bbb0
+
+org.example.TestRunner.Runners.runScenario  Time elapsed: 7.634 s  <<< FAILURE!
+java.lang.AssertionError: This is First Url expected [ https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+
+org.example.TestRunner.Runners.runScenario  Time elapsed: 7.873 s  <<< FAILURE!
+java.lang.AssertionError: This is second Url expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+
+org.example.TestRunner.Runners.runScenario  Time elapsed: 8.288 s  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+

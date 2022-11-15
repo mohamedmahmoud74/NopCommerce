@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="256.311">
+    <testcase classname="F1_Register users could register with new accounts" name="guest user could register with valid data successfully" time="34.026">
+        <failure message="target frame detached&#10;  (failed to check if window was closed: disconnected: unable to connect to renderer)&#10;  (Session info: chrome=107.0.5304.107)&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [564b4005e71049d463446257f3c5bbb0, findElement {using=xpath, value=//div[@class=&quot;result&quot;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\FIXSTO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65391}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65391/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 564b4005e71049d463446257f3c5bbb0" type="org.openqa.selenium.WebDriverException"><![CDATA[Given user go to register page..............................................passed
+When user enter gender type.................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email and companyName........................................passed
+And user fills Password fields "123456" "123456"............................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................failed
+
+StackTrace:
+org.openqa.selenium.WebDriverException: target frame detached
+  (failed to check if window was closed: disconnected: unable to connect to renderer)
+  (Session info: chrome=107.0.5304.107)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [564b4005e71049d463446257f3c5bbb0, findElement {using=xpath, value=//div[@class="result"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\FIXSTO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65391}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65391/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 564b4005e71049d463446257f3c5bbb0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.example.Pages.P01_registerPom.sucssesMasege(P01_registerPom.java:84)
+	at org.example.stepDefinations.D1_registerStepDefinations.SuccessMessage(D1_registerStepDefinations.java:59)
+	at ✽.success message is displayed(file:///D:/palo/New%20folder%20(2)/Ecomerce/src/main/resources/Features/F001_Register.feature:13)
+]]></failure>
+    </testcase>
+    <testcase classname="users could use login functionality to use their accounts" name=": user could login with valid email and password" time="13.262">
+        <system-out><![CDATA[Given user navigate to login page...........................................passed
+When login with valid "mohamed@gmail.com" and "123456"......................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="users could use login functionality to use their accounts" name="user could login with invalid email and password" time="13.534">
+        <system-out><![CDATA[Given user navigate to login page...........................................passed
+When login with invalid email "mohamedm.salem192020@gmail.com" and invalid password "P@ssw0r".passed
+Then user press on login button.............................................passed
+And user could not login to the system......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user could switch between currencies [$, €]" name="user can choose Euro currency" time="9.441">
+        <system-out><![CDATA[Given CLick on Currencues LOV...............................................passed
+When user can select Euro from currency dropdown............................passed
+Then All dollar sign change to Euro sign....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user search for products" name="user could search using product name" time="18.578">
+        <system-out><![CDATA[When user search click on search field......................................passed
+And user search with "book".................................................passed
+Then user could find "book".................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user search for products" name="user could search using product name 2" time="18.882">
+        <system-out><![CDATA[When user search click on search field......................................passed
+And user search with "laptop"...............................................passed
+Then user could find "laptop"...............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user search for products" name="user could search using product name 3" time="19.187">
+        <system-out><![CDATA[When user search click on search field......................................passed
+And user search with "nike".................................................passed
+Then user could find "nike".................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user search for products" name="user could search for product using sku" time="10.548">
+        <system-out><![CDATA[When user search click on search field......................................passed
+And user search with "SCI_FAITH"............................................passed
+Then user could find "SCI_FAITH" inside product details page................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user search for products" name="user could search for product using sku 2" time="10.345">
+        <system-out><![CDATA[When user search click on search field......................................passed
+And user search with "APPLE_CAM"............................................passed
+Then user could find "APPLE_CAM" inside product details page................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user search for products" name="user could search for product using sku 3" time="9.876">
+        <system-out><![CDATA[When user search click on search field......................................passed
+And user search with "SF_PRO_11"............................................passed
+Then user could find "SF_PRO_11" inside product details page................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Hover Feature" name="user can hover on category" time="8.922">
+        <system-out><![CDATA[When user hover on random category..........................................passed
+And user click on random sub-category.......................................passed
+Then validate sub category page title.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="users check Slider" name="first slider is clickable" time="7.622">
+        <failure message="This is First Url expected [ https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user can click on first slider.........................................passed
+Then navigate to the page of first slider...................................failed
+
+StackTrace:
+java.lang.AssertionError: This is First Url expected [ https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefinations.D06_homeSlidersStepDef.navigateToThePageOfFirstSlider(D06_homeSlidersStepDef.java:25)
+	at ✽.navigate to the page of first slider(file:///D:/palo/New%20folder%20(2)/Ecomerce/src/main/resources/Features/F006_homeSliders.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="users check Slider" name="second slider is clickable" time="7.865">
+        <failure message="This is second Url expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user can click on second slider........................................passed
+Then navigate to the page of second slider..................................failed
+
+StackTrace:
+java.lang.AssertionError: This is second Url expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefinations.D06_homeSlidersStepDef.navigateToThePageOfSecondSlider(D06_homeSlidersStepDef.java:39)
+	at ✽.navigate to the page of second slider(file:///D:/palo/New%20folder%20(2)/Ecomerce/src/main/resources/Features/F006_homeSliders.feature:9)
+]]></failure>
+    </testcase>
+    <testcase classname="user can navigate to social media" name="user navigate to facebook" time="9.645">
+        <system-out><![CDATA[When user opens facebook link...............................................passed
+Then facebook is Opened in a new tab........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can navigate to social media" name="user navigate to Twitter" time="9.602">
+        <system-out><![CDATA[When user opens Twitter link................................................passed
+Then Twitter is Opened in a new tab.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can navigate to social media" name="user navigate to rss" time="8.281">
+        <failure message="Index 1 out of bounds for length 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user opens rss link....................................................passed
+Then rss is Opened in a new tab.............................................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.Pages.P04_homePagePom.assertRss(P04_homePagePom.java:126)
+	at org.example.stepDefinations.D07_followUsStepDef.rssIsOpenedInANewTab(D07_followUsStepDef.java:49)
+	at ✽.rss is Opened in a new tab(file:///D:/palo/New%20folder%20(2)/Ecomerce/src/main/resources/Features/F007_followUs.feature:15)
+]]></failure>
+    </testcase>
+    <testcase classname="user can navigate to social media" name="user navigate to youtube" time="12.811">
+        <system-out><![CDATA[When user opens youtube link................................................passed
+Then youtube is Opened in a new tab.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user add proudact to wishlist" name="verify that user add product to his wishlist" time="9.641">
+        <system-out><![CDATA[When user add product to wishlist...........................................passed
+Then wishlist give user message of adding product...........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user add proudact to wishlist" name="verify that user add product to his wishlist and get Qty" time="23.742">
+        <system-out><![CDATA[When user add product to wishlist...........................................passed
+And wishlist give user message of adding product............................passed
+And Wait until Massage is disappeared.......................................passed
+And user get the number of wishlist items after adding product..............passed
+Then verify Qty greater than Zero...........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
